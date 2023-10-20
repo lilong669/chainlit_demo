@@ -52,7 +52,7 @@ Then I should query the schema of the most relevant table"""
 # Initialize database
 # 将密码进行 URL 编码
 password = quote("P@ssw0rd")
-db = SQLDatabase.from_uri(f'mysql+pymysql://bdp_schedule:{password}@10.8.50.32:3306/bdp_schedule')
+db = SQLDatabase.from_uri(f'mysql+pymysql://')
 # # Pull down prompt
 # prompt = CUSTOM_PROMPT
 # Initialize model
