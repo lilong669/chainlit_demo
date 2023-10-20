@@ -27,7 +27,7 @@ For example, database1.table1 would be the input if you wanted to get the schema
     ) -> str:
         """Use the tool."""
         database, table_name = query.split(".")
-        engine = create_engine('trino+pyhive://10.8.33.158:8080/hive/gjdw')
+        engine = create_engine('trino+pyhive://')
         df = pd.read_sql_query(f'DESC {database}.{table_name}', engine)
         result_schema = self.get_df_str(df)
         df_sample = pd.read_sql_query(f'select * from {database}.{table_name} limit 1', engine)
@@ -40,7 +40,7 @@ For example, database1.table1 would be the input if you wanted to get the schema
     ) -> str:
         """Use the tool asynchronously."""
         database, table_name = query.split(".")
-        engine = create_engine('trino+pyhive://10.8.33.158:8080/hive/gjdw')
+        engine = create_engine('trino+pyhive://')
         df = pd.read_sql_query(f'DESC {database}.{table_name}', engine)
         result_schema = self.get_df_str(df)
         df_sample = pd.read_sql_query(f'select * from {database}.{table_name} limit 1', engine)
@@ -77,7 +77,7 @@ get data formatting from sample rows from table."""
     ) -> str:
         """Use the tool."""
         try:
-            engine = create_engine('trino+pyhive://10.8.33.158:8080/hive/gjdw')
+            engine = create_engine('trino+pyhive://')
             df_sample = pd.read_sql_query(f'select * from ({query})t1 limit 5', engine)
             result_sample = self.get_df_str(df_sample)
             result_final = result_sample
@@ -90,7 +90,7 @@ get data formatting from sample rows from table."""
     ) -> str:
         """Use the tool asynchronously."""
         try:
-            engine = create_engine('trino+pyhive://10.8.33.158:8080/hive/gjdw')
+            engine = create_engine('trino+pyhive://')
             df_sample = pd.read_sql_query(f'select * from ({query})t1 limit 3', engine)
             result_sample = self.get_df_str(df_sample)
             result_final = result_sample
@@ -124,7 +124,7 @@ Always use this tool before executing a query with get_trino_sql_query!"""
     ) -> str:
         """Use the tool."""
         try:
-            engine = create_engine('trino+pyhive://10.8.33.158:8080/hive/gjdw')
+            engine = create_engine('trino+pyhive://')
             pd.read_sql_query(f'explain {query}', engine)
             return "pass"
         except Exception as e:
@@ -135,7 +135,7 @@ Always use this tool before executing a query with get_trino_sql_query!"""
     ) -> str:
         """Use the tool asynchronously."""
         try:
-            engine = create_engine('trino+pyhive://10.8.33.158:8080/hive/gjdw')
+            engine = create_engine('trino+pyhive://')
             pd.read_sql_query(f'explain {query}', engine)
             return "pass"
         except Exception as e:
