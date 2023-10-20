@@ -52,7 +52,7 @@ Then I should query the schema of the most relevant table"""
 # Initialize database
 # 将密码进行 URL 编码
 password = quote("P@ssw0rd")
-engine = create_engine('hive://hive:hive@10.8.33.166:10000/gjdw?auth=CUSTOM')
+engine = create_engine('hive://hive:hive@')
 db = SQLDatabase(engine, schema='gjdw', include_tables=['dw_sale_tr_goods_dt', 'dim_org', 'dw_sale_tr_goods_dt'])
 # db = SQLDatabase.from_uri(f'mysql+pymysql://bdp_schedule:{password}@10.8.50.32:3306/bdp_schedule')
 # # Pull down prompt
