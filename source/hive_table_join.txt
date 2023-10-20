@@ -1,0 +1,3 @@
+The following is the table join condition：
+gjdw.dw_sale_tr_goods_dt.org_no can be joined with gjdw.dim_org.org_no
+gjdw.dw_sale_tr_goods_dt.org_no can be joined with gjdw.dim_channel.channel_code

@@ -1,0 +1,13 @@
+The following is the table defination:
+Table Name: gjdw.dw_sale_tr_goods_dt Table Comment: 销售订单/POS小票明细表/sales orders detail table
+Table Name: gjdw.dw_stk_bal Table Comment: 门店库存每日表/org stock daily table
+Table Name: gjdw.dim_company Table Comment: 公司主数据表
+Table Name: gjdw.dim_channel Table Comment: 渠道主数据表
+Table Name: gjdw.dim_goods Table Comment: 商品主数据表
+Table Name: gjdw.dim_material Table Comment: 物料主数据表
+Table Name: gjdw.dw_vip_customer_doc Table Comment: 会员卡主数据表
+Table Name: gjdw.dim_move_type Table Comment: 移动类型主数据表
+Table Name: gjdw.dim_org Table Comment: 门店主数据表/store table
+Table Name: gjdw.dim_suborg_auto Table Comment: 门店新旧码转换表
+Table Name: gjdw.dw_coupon_info Table Comment: 券核销销售订单明细表
+Table Name: gjdw.dw_sale_tr_pay Table Comment: 销售支付明细表
