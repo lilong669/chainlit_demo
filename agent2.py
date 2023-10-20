@@ -52,7 +52,7 @@ Then I should query the schema of the most relevant table"""
 # Initialize database
 # 将密码进行 URL 编码
 password = quote("P@ssw0rd")
-engine =  create_engine('trino+pyhive://10.8.33.158:8080/hive/gjdw')
+engine =  create_engine('trino+pyhive://')
 db = SQLDatabase(engine, schema='gjdw', include_tables=['dw_sale_tr_goods_dt', 'dim_org', 'dw_sale_tr_goods_dt'])
 # Pull down prompt
 # prompt = CUSTOM_PROMPT
